@@ -1,0 +1,22 @@
+password: 9409acf2d8d368243c55f98775e225f4
+proxyhost: some.proxy.net
+proxyport: 8080
+outsideport: 443
+# Preferably don't use a hostname, as DNS might not work inside a firewalled environment
+outsidehost: 94.103.155.103
+proxyuser: "someuser"
+proxypass: "somepass"
+pipeholes:
+- remoteport: 7000
+  localport: 7000
+  remotehost: irc.freenode.net
+- remoteport: 6667
+  localport: 1899 
+  remotehost: wina.ugent.be
+- remoteport: 6667
+  localport: 1900 
+  remotehost: irc.mozilla.org
+- remoteport: 22
+  localport: 2022
+# This means the outside host, not the real localhost.
+  remotehost: localhost
