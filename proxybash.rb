@@ -118,6 +118,9 @@ module ProxyBash
 							if (response !~ /^HTTP\/1\.. 200/)
 								raise "Unexpected reply from proxy, expecting 'HTTP/1.0 200 Connection established', got '#{response}'"
 							end
+							until response == ""
+								response = outside.gets.strip
+							end
 						rescue Exception => e
 							puts "error: #{e}"
 							outside.close unless outside.eof?
